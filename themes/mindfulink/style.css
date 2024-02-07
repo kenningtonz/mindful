@@ -30,3 +30,9 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+
+
+.wp-block-heading.is-style-custom-header {
+	font-size: var(--wp--preset--font-size--xx-large);
+	font-family: var(--wp--preset--font-family--serif);
+}

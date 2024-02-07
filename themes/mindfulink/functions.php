@@ -18,7 +18,7 @@
 function mindfulink_wp_enqueue_scripts()
 {
 	wp_enqueue_style(
-		'mindfulink-theme',
+		'style',
 		get_stylesheet_uri(),
 		[],
 		wp_get_theme()->get('Version')
