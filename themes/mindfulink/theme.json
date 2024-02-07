@@ -27,9 +27,34 @@
 					"name": "Primary"
 				},
 				{
-					"slug": "secondary",
-					"color": "#00a0d2",
-					"name": "Secondary"
+					"slug": "blue",
+					"color": "#5a6eaa",
+					"name": "Blue"
+				},
+				{
+					"slug": "green",
+					"color": "#8fb48e",
+					"name": "Green"
+				},
+				{
+					"slug": "lavender",
+					"color": "#a98bb1",
+					"name": "Lavender"
+				},
+				{
+					"slug": "gold",
+					"color": "#d9c195",
+					"name": "Gold"
+				},
+				{
+					"slug": "taupe",
+					"color": "#b4a798",
+					"name": "Taupe"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
 				},
 				{
 					"slug": "transparent",
@@ -51,12 +76,18 @@
 			],
 			"duotone": [
 				{
-					"colors": [ "#00a0d2", "#0073aa"],
+					"colors": [
+						"#00a0d2",
+						"#0073aa"
+					],
 					"slug": "secondary-primary",
 					"name": "Secondary and primary"
 				},
 				{
-					"colors": ["#0073aa", "#f0f0f0"],
+					"colors": [
+						"#0073aa",
+						"#f0f0f0"
+					],
 					"slug": "primary-contrast",
 					"name": "Primary and Contrast"
 				}
@@ -67,7 +98,14 @@
 			"wideSize": "1440px"
 		},
 		"spacing": {
-			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw",
+				"%"
+			]
 		},
 		"typography": {
 			"dropCap": false,
@@ -354,7 +392,10 @@
 		{
 			"name": "no-title",
 			"title": "No title",
-			"postTypes": [ "post","page" ]
+			"postTypes": [
+				"post",
+				"page"
+			]
 		}
 	]
 }

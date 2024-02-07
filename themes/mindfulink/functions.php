@@ -15,12 +15,13 @@
  *
  * @return void
  */
-function mindfulink_styles() {
+function mindfulink_wp_enqueue_scripts()
+{
 	wp_enqueue_style(
-		'mindfulink-style',
+		'mindfulink-theme',
 		get_stylesheet_uri(),
 		[],
-		wp_get_theme()->get( 'Version' )
+		wp_get_theme()->get('Version')
 	);
 }
-add_action( 'wp_enqueue_scripts', 'mindfulink_styles' );
+add_action('wp_enqueue_scripts', 'mindfulink_wp_enqueue_scripts');
