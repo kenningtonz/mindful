@@ -17,9 +17,24 @@
 					"name": "Base"
 				},
 				{
+					"slug": "blueDark",
+					"color": "#283d50",
+					"name": "Blue"
+				},
+				{
 					"slug": "blue",
 					"color": "#5a6eaa",
 					"name": "Blue"
+				},
+				{
+					"slug": "blueLight",
+					"color": "#d6dbea",
+					"name": "BlueLight"
+				},
+				{
+					"slug": "greenDark",
+					"color": "#144113",
+					"name": "GreenDark"
 				},
 				{
 					"slug": "green",
@@ -27,9 +42,29 @@
 					"name": "Green"
 				},
 				{
+					"slug": "greenLight",
+					"color": "#e0eddf",
+					"name": "GreenLight"
+				},
+				{
+					"slug": "lavenderDark",
+					"color": "#431a4f",
+					"name": "LavenderDark"
+				},
+				{
 					"slug": "lavender",
 					"color": "#a98bb1",
 					"name": "Lavender"
+				},
+				{
+					"slug": "lavenderLight",
+					"color": "#EADEED",
+					"name": "LavenderLight"
+				},
+				{
+					"slug": "goldDark",
+					"color": "#49391d",
+					"name": "GoldDark"
 				},
 				{
 					"slug": "gold",
@@ -37,9 +72,24 @@
 					"name": "Gold"
 				},
 				{
+					"slug": "goldLight",
+					"color": "#f5ebda",
+					"name": "GoldLight"
+				},
+				{
+					"slug": "taupeDark",
+					"color": "#6e491e",
+					"name": "TaupeDark"
+				},
+				{
 					"slug": "taupe",
 					"color": "#b4a798",
 					"name": "Taupe"
+				},
+				{
+					"slug": "taupeLight",
+					"color": "#e3dacf",
+					"name": "TaupeLight"
 				},
 				{
 					"slug": "white",
@@ -70,6 +120,7 @@
 		"typography": {
 			"dropCap": false,
 			"fluid": true,
+			"customFontSize": false,
 			"fontFamilies": [
 				{
 					"name": "System",

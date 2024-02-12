@@ -1,26 +1,84 @@
 
 
 wp.blocks.registerBlockStyle('core/heading', {
-    name: 'custom-heading',
+    name: 'heading',
     label: 'Heading',
 });
 
+wp.blocks.registerBlockStyle('core/heading', {
+    name: 'sub-heading',
+    label: 'Sub Heading',
+});
+
 wp.blocks.registerBlockStyle('core/pullquote', {
-    name: 'fancy-pullqoute',
-    label: 'Fancy Pullquote',
+    name: 'pullqoute',
+    label: 'Pullquote',
 });
 
 wp.blocks.registerBlockStyle('core/paragraph', {
-    name: 'fancy-paragraph',
-    label: 'Fancy Paragraph',
+    name: 'paragraph',
+    label: 'Paragraph',
 });
 
 wp.blocks.registerBlockStyle('core/quote', {
-    name: 'fancy-quote',
-    label: 'Fancy Quote',
+    name: 'quote',
+    label: 'Quote',
+});
+
+wp.blocks.registerBlockStyle('core/list', {
+    name: 'list',
+    label: 'List',
+});
+
+wp.blocks.registerBlockStyle('core/table', {
+    name: 'table',
+    label: 'Table',
+});
+
+wp.blocks.registerBlockStyle('core/footnotes', {
+    name: 'footnotes',
+    label: 'Footnotes',
+});
+
+wp.blocks.registerBlockStyle('core/verse', {
+    name: 'verse',
+    label: 'Verse',
+});
+
+wp.blocks.registerBlockStyle('core/details', {
+    name: 'details',
+    label: 'Details',
+});
+
+
+wp.blocks.registerBlockStyle('core/group', {
+    name: 'card-lavender',
+    label: 'Lavender Card',
+});
+
+
+wp.blocks.registerBlockStyle('core/group', {
+    name: 'card-blue',
+    label: 'Blue Card',
+});
+
+
+wp.blocks.registerBlockStyle('core/group', {
+    name: 'card-green',
+    label: 'Green Card',
 });
 
 wp.blocks.registerBlockStyle('core/group', {
-    name: 'card-group',
-    label: 'Card Group',
+    name: 'card-gold',
+    label: 'Gold Card',
+});
+
+wp.blocks.registerBlockStyle('core/group', {
+    name: 'card-taupe',
+    label: 'Taupe Card',
+});
+
+wp.blocks.registerBlockStyle('core/group', {
+    name: 'header-row',
+    label: 'Header Row',
 });
