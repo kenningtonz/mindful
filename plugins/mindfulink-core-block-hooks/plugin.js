@@ -50,6 +50,16 @@ wp.blocks.registerBlockStyle('core/details', {
     label: 'Details',
 });
 
+wp.blocks.registerBlockStyle('core/preformatted', {
+    name: 'preformatted',
+    label: 'Preformatted',
+});
+
+wp.blocks.registerBlockStyle('core/code', {
+    name: 'code',
+    label: 'Code',
+});
+
 
 wp.blocks.registerBlockStyle('core/group', {
     name: 'card-lavender',
