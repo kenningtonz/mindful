@@ -237,3 +237,38 @@ body {
 .site-header a:hover {
 	transform: scale(1.1);
 }
+
+#contactForm .formWrapper {
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+}
+
+#contactForm .formFieldWrapper {}
+
+#contactForm .formField {
+	border: 3px solid var(--wp--preset--color--lavender-dark);
+	border-radius: 10px;
+}
+
+#contactForm button.formField {
+	transition: transform 0.2s ease-in-out;
+	background-color: var(--wp--preset--color--lavender-dark);
+	color: white;
+}
+
+#contactForm button.formField:hover {
+	transform: scale(1.05);
+}
+
+#contactForm button.formField:active {
+	transform: scale(0.95);
+}
+
+#contactForm .formField:focus {
+	border: 3px solid var(--wp--preset--color--lavender);
+}
+
+#contactForm input[type=checkbox].wsf-field:checked+label.wsf-label:before {
+
+	background-color: var(--wp--preset--color--lavender-dark);
+}
