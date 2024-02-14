@@ -10,6 +10,56 @@
 			"custom": false,
 			"customGradient": false,
 			"customDuotone": false,
+			"duotone": [
+				{
+					"colors": [
+						"#5a6eaa",
+						"#d6dbea"
+					],
+					"slug": "blue-lightblue",
+					"name": "Blue LightBlue"
+				},
+				{
+					"colors": [
+						"#8fb48e",
+						"#e0eddf"
+					],
+					"slug": "green-lightgreen",
+					"name": "Green LightGreen"
+				},
+				{
+					"colors": [
+						"#a98bb1",
+						"#EADEED"
+					],
+					"slug": "lavender-lightlavender",
+					"name": "Lavender LightLavender"
+				},
+				{
+					"colors": [
+						"#d9c195",
+						"#f5ebda"
+					],
+					"slug": "gold-lightgold",
+					"name": "Gold LightGold"
+				},
+				{
+					"colors": [
+						"#b4a798",
+						"#e3dacf"
+					],
+					"slug": "taupe-lighttaupe",
+					"name": "Taupe LightTaupe"
+				},
+				{
+					"colors": [
+						"#B2A89A",
+						"#DED8CE"
+					],
+					"slug": "primary-lightprimary",
+					"name": "Primary LightPrimary"
+				}
+			],
 			"palette": [
 				{
 					"slug": "base",
@@ -394,7 +444,7 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--contrast)"
+					"text": "var(--wp--preset--color--base)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",
