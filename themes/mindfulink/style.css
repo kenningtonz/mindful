@@ -156,7 +156,7 @@ body {
 
 .is-style-verse {
 	font-size: var(--wp--preset--font-size--medium);
-	font-family: var(--wp--preset--font-family--serif);
+	font-family: var(--wp--preset--font-family--sans-serif);
 }
 
 .is-style-quote {
@@ -333,3 +333,28 @@ body {
 #contactForm input[type=checkbox].wsf-field:checked+label.wsf-label:before {
 	background-color: var(--wp--preset--color--lavender-dark);
 }
+
+.is-style-details summary::marker {
+	color: white;
+}
+
+.is-style-details {
+	border-radius: 0.5rem;
+	font-family: var(--wp--preset--font-family--sans-serif);
+}
+
+.is-style-details summary {
+	font-weight: 500;
+	padding: 0.2rem 0.4rem;
+	background-color: var(--wp--preset--color--lavender);
+	color: white;
+}
+
+.is-style-details p {
+	padding: 0.5rem 0.4rem;
+	margin-top: 0;
+	background-color: var(--wp--preset--color--lavender-light);
+
+}
+
+.
