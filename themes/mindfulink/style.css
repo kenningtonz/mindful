@@ -85,6 +85,8 @@ body {
 	content: '- ';
 }
 
+
+
 .is-style-preformatted {
 	font-size: var(--wp--preset--font-size--medium);
 	font-family: var(--wp--preset--font-family--sans-serif);
@@ -158,8 +160,40 @@ body {
 }
 
 .is-style-quote {
+	font-style: italic;
 	font-size: var(--wp--preset--font-size--medium);
-	font-family: var(--wp--preset--font-family--serif);
+	font-family: var(--wp--preset--font-family--sans-serif);
+}
+
+.is-style-quote p {
+	margin-bottom: 0;
+}
+
+.is-style-quote p::before {
+	content: open-quote;
+	font-size: 1.5em;
+	line-height: 0.1em;
+	padding-left: 0.8rem;
+	color: var(--wp--preset--color--lavender-dark);
+}
+
+.is-style-quote p::after {
+	content: close-quote;
+	font-size: 1.5em;
+	line-height: 0.1em;
+	padding-right: 0.8rem;
+	color: var(--wp--preset--color--lavender-dark);
+}
+
+.is-style-quote cite {
+	font-size: var(--wp--preset--font-size--small);
+	margin-left: 2rem;
+}
+
+
+.is-style-quote cite:before {
+	content: '- ';
+	color: var(--wp--preset--color--lavender-dark);
 }
 
 
@@ -272,7 +306,6 @@ body {
 	font-family: var(--wp--preset--font-family--sans-serif);
 }
 
-#contactForm .formFieldWrapper {}
 
 #contactForm .formField {
 	border: 3px solid var(--wp--preset--color--lavender-dark);
