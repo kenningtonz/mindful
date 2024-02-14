@@ -48,6 +48,18 @@ body {
 	font-family: var(--wp--preset--font-family--sans-serif);
 }
 
+.is-style-paragraph sup {
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: bold;
+	color: var(--wp--preset--color--primary-dark);
+	vertical-align: 0.6rem;
+}
+
+.is-style-paragraph sup a {
+	text-decoration: none;
+
+}
+
 .is-style-pullquote {
 	font-size: var(--wp--preset--font-size--medium);
 	font-family: var(--wp--preset--font-family--sans-serif);
@@ -375,4 +387,16 @@ body {
 
 .is-style-list li {
 	padding-left: 0.5rem;
+}
+
+
+.is-style-footnotes {
+	font-size: var(--wp--preset--font-size--small);
+	font-family: var(--wp--preset--font-family--sans-serif);
+}
+
+
+.is-style-footnotes li::marker {
+	font-weight: bold;
+	color: var(--wp--preset--color--primary-dark);
 }
