@@ -55,9 +55,9 @@ body {
 	text-align: center;
 	margin: 20px;
 	padding: 20px;
-	border-left: 4px solid var(--wp--preset--color--lavender-dark);
+	border-left: 4px solid var(--wp--preset--color--primary-dark);
 	border-radius: 30px;
-	border-right: 4px solid var(--wp--preset--color--lavender-dark);
+	border-right: 4px solid var(--wp--preset--color--primary-dark);
 	font-style: italic;
 }
 
@@ -163,10 +163,15 @@ body {
 	font-style: italic;
 	font-size: var(--wp--preset--font-size--medium);
 	font-family: var(--wp--preset--font-family--sans-serif);
+
 }
 
 .is-style-quote p {
 	margin-bottom: 0;
+}
+
+.is-style-quote cite {
+	color: var(--wp--preset--color--primary-dark)
 }
 
 .is-style-quote p::before {
@@ -174,7 +179,7 @@ body {
 	font-size: 1.5em;
 	line-height: 0.1em;
 	padding-left: 0.8rem;
-	color: var(--wp--preset--color--lavender-dark);
+	color: var(--wp--preset--color--primary-dark);
 }
 
 .is-style-quote p::after {
@@ -182,7 +187,7 @@ body {
 	font-size: 1.5em;
 	line-height: 0.1em;
 	padding-right: 0.8rem;
-	color: var(--wp--preset--color--lavender-dark);
+	color: var(--wp--preset--color--primary-dark);
 }
 
 .is-style-quote cite {
@@ -346,15 +351,28 @@ body {
 .is-style-details summary {
 	font-weight: 500;
 	padding: 0.2rem 0.4rem;
-	background-color: var(--wp--preset--color--lavender);
+	background-color: var(--wp--preset--color--primary-dark);
 	color: white;
 }
 
 .is-style-details p {
 	padding: 0.5rem 0.4rem;
 	margin-top: 0;
-	background-color: var(--wp--preset--color--lavender-light);
+	background-color: var(--wp--preset--color--primary);
 
 }
 
-.
+.is-style-list {
+	font-family: var(--wp--preset--font-family--sans-serif);
+
+}
+
+.is-style-list li::marker {
+	content: "\2726";
+	font-size: 1rem;
+	color: var(--wp--preset--color--primary-dark);
+}
+
+.is-style-list li {
+	padding-left: 0.5rem;
+}

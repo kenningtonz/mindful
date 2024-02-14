@@ -97,6 +97,21 @@
 					"name": "White"
 				},
 				{
+					"slug": "primaryLight",
+					"color": "#DED8CE",
+					"name": "primaryLight"
+				},
+				{
+					"slug": "primary",
+					"color": "#B2A89A",
+					"name": "primary"
+				},
+				{
+					"slug": "primaryDark",
+					"color": "#58524B",
+					"name": "primaryDark"
+				},
+				{
 					"slug": "transparent",
 					"color": "transparent",
 					"name": "Transparent"
