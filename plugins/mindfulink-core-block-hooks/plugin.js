@@ -11,7 +11,7 @@ wp.blocks.registerBlockStyle('core/heading', {
 });
 
 wp.blocks.registerBlockStyle('core/pullquote', {
-    name: 'pullqoute',
+    name: 'pullquote',
     label: 'Pullquote',
 });
 
