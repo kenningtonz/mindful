@@ -404,3 +404,31 @@ body {
 	font-weight: bold;
 	color: var(--wp--preset--color--primary-dark);
 }
+
+
+.flexRow {
+	container-type: inline-size;
+	container-name: row;
+}
+
+@container row (max-width: 400px) {
+	.flexRow .child25 {
+		flex: 0 1 50%;
+		order: 2;
+	}
+
+	.flexRow .child75 {
+		flex: 1 1 100%;
+		order: 1;
+	}
+}
+
+@container row (min-width: 401px) {
+	.flexRow .child25 {
+		flex: 1 1 15%;
+	}
+
+	.flexRow .child75 {
+		flex: 1 1 73%;
+	}
+}
