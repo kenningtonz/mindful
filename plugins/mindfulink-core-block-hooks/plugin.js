@@ -108,12 +108,12 @@ wp.blocks.registerBlockStyle("core/post-template", {
 	label: "Post Template",
 });
 
-wp.blocks.registerBlockStyle("core/post-template", {
-	name: "post-template",
-	label: "Post Template",
-});
-
 wp.blocks.registerBlockStyle("core/post-title", {
 	name: "post-title",
 	label: "Post Title",
+});
+
+wp.blocks.registerBlockStyle("core/post-excerpt", {
+	name: "post-excerpt",
+	label: "Post Excerpt",
 });
