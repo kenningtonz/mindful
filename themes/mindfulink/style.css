@@ -438,7 +438,6 @@ body {
 }
 
 .is-style-previous-post a,
-.wp-block-add-to-cart-form button,
 is-style-next-post a,
 .post-navigation-link-previous a,
 .post-navigation-link-next a {
@@ -454,6 +453,24 @@ is-style-next-post a,
 	align-items: center;
 	border-radius: 20px;
 	box-shadow: 0 2px 2px 0px var(--wp--preset--color--blue);
+}
+
+.wp-block-add-to-cart-form button a,
+.wc-block-components-checkout-place-order-button,
+.single_add_to_cart_button,
+.wc-block-cart__submit-container a {
+	color: white;
+	text-decoration: none;
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-weight: bold;
+	background-color: var(--wp--preset--color--green-dark);
+	display: flex;
+	justify-content: center;
+	padding: 1rem 3rem;
+	align-items: center;
+	border-radius: 20px;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
 }
 
 .is-style-post-template li {
