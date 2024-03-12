@@ -30,7 +30,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.is-style-heading {
+.is-style-heading,
+.is-style-query-title {
 	font-size: var(--wp--preset--font-size--xx-large);
 	font-family: var(--wp--preset--font-family--serif);
 }
@@ -437,6 +438,7 @@ body {
 }
 
 .is-style-previous-post a,
+.wp-block-add-to-cart-form button,
 is-style-next-post a,
 .post-navigation-link-previous a,
 .post-navigation-link-next a {
@@ -495,4 +497,53 @@ is-style-next-post a,
 	color: var(--wp--preset--color--blue-dark);
 	margin: 0;
 	padding: 0;
+}
+
+.wc-block-catalog-sorting select {
+	color: white;
+	/* appearance: none; */
+	border: none;
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-weight: bold;
+	background-color: var(--wp--preset--color--green-dark);
+}
+
+.wc-block-catalog-sorting {
+	background-color: var(--wp--preset--color--green-dark);
+	display: flex;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	align-items: center;
+	border-radius: 20px;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
+}
+
+.is-style-product-template button {
+	display: flex;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	align-items: center;
+	border-radius: 20px;
+	color: white;
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-weight: bold;
+	background-color: var(--wp--preset--color--green-dark);
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
+}
+
+.is-style-product-template li {
+	border-radius: 0.5rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--green-dark);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 24px;
+
+	background-color: var(--wp--preset--color--green-light);
+}
+
+.is-style-product-template img {
+	border-radius: 0.5rem;
 }
