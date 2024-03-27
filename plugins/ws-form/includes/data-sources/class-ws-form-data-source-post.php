@@ -341,6 +341,8 @@
 
 					$acf_field_key_parent_lookup = array();
 
+					$acf_format_value_lookup = array();
+
 					$acf_field_keys = array_unique($acf_field_keys);
 
 					foreach($acf_field_keys as $acf_field_key) {
@@ -369,6 +371,21 @@
 							default :
 
 								$acf_field_key_parent_lookup[$acf_field_key] = false;
+						}
+
+						// Determine whether value should be formatted
+						switch($acf_field_object['type']) {
+
+							case 'date_picker' :
+							case 'date_time_picker' :
+							case 'time_picker' :
+
+								$acf_format_value_lookup[$acf_field_key] = true;
+								break;
+
+							default :
+
+								$acf_format_value_lookup[$acf_field_key] = false;
 						}
 					}
 				}
@@ -711,6 +728,9 @@
 							// Check for parent field
 							$acf_field_key_parent = isset($acf_field_key_parent_lookup[$acf_field_key]) ? $acf_field_key_parent_lookup[$acf_field_key] : false;
 
+							// Check for format value
+							$acf_format_value = isset($acf_format_value_lookup[$acf_field_key]) ? $acf_format_value_lookup[$acf_field_key] : false;
+
 							if($acf_field_key_parent !== false) {
 
 								if(have_rows($acf_field_key_parent, $post_id)) {
@@ -719,13 +739,13 @@
 
 										the_row();
 
-										$row_data[] = self::acf_get_row_data(get_sub_field($acf_field_key));
+										$row_data[] = self::acf_get_row_data(get_sub_field($acf_field_key, $acf_format_value));
 									}
 								}
 
 							} else {
 
-								$row_data[] = self::acf_get_row_data(get_field($acf_field_key, $post_id, false));
+								$row_data[] = self::acf_get_row_data(get_field($acf_field_key, $post_id, $acf_format_value));
 							}
 
 							$row->data[] = implode(',', $row_data);

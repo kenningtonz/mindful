@@ -29,7 +29,7 @@
 				);
 			}
 
-			if(!is_null($object)) {
+			if(!empty($object)) {
 
 				$jetengine_groups = array($object => $jetengine_groups);
 			}
@@ -68,6 +68,13 @@
 		public static function jetengine_get_fields_process(&$options_jetengine, $jetengine_field_group_name, $jetengine_fields, $choices_filter, $raw, $traverse, $context = '', $depth = 0, $parent_field_name = '') {
 
 			foreach($jetengine_fields as $jetengine_field) {
+
+				if(
+					!isset($jetengine_field['name']) ||
+					!isset($jetengine_field['type'])
+				) {
+					continue;
+				}
 
 				// Get field name
 				$jetengine_field_name = $jetengine_field['name'];
@@ -794,19 +801,28 @@
 			$format_time = WS_Form_Common::get_object_meta_value($field_object, 'format_time', get_option('time_format'));
 			if(empty($format_time)) { $format_time = get_option('time_format'); }
 
+			// We'll use UTC so that wp_date doesn't offset the date
+			$utc = new DateTimeZone('UTC');
+
+			// Check WordPress version
+			$wp_new = WS_Form_Common::wp_version_at_least('5.3');
+
+			// Get time
+			$time = $is_timestamp ? $jetengine_field_values : strtotime($jetengine_field_values);
+
 			switch($jetengine_field_type) {
 
 				case 'date' :
 
-					return gmdate($format_date, $is_timestamp ? $jetengine_field_values : strtotime($jetengine_field_values));
-
-				case 'time' :
-
-					return gmdate($format_time, strtotime($jetengine_field_values));
+					return $wp_new ? wp_date($format_date, $time, $utc) : gmdate($format_date, $time);
 
 				case 'datetime-local' :
 
-					return gmdate($format_date . ' ' . $format_time, $is_timestamp ? $jetengine_field_values : strtotime($jetengine_field_values));
+					return $wp_new ? wp_date($format_date . ' ' . $format_time, $time, $utc) : gmdate($format_date . ' ' . $format_time, $time);
+
+				case 'time' :
+
+					return $wp_new ? wp_date($format_time, $time, $utc) : gmdate($format_time, $time);
 			}
 
 			return '';

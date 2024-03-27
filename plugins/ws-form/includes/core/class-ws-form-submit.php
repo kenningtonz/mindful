@@ -416,7 +416,7 @@
 		}
 
 		// Read - Count
-		public function db_read_count($join = '', $where = '', $group_by = '', $bypass_user_capability_check = false) {
+		public function db_read_count($join = '', $where = '', $bypass_user_capability_check = false) {
 
 			// User capability check
 			if(!$bypass_user_capability_check && !WS_Form_Common::can_user('read_submission')) { return false; }
@@ -432,7 +432,6 @@
 
 			if($join != '') { $sql .= sprintf(" %s", $join); }
 			if($where != '') { $sql .= sprintf(" WHERE %s", $where); }
-			if($group_by != '') { $sql .= sprintf(" GROUP BY %s", $group_by); }
 
 			$sql .= ';';
 
@@ -1463,9 +1462,6 @@
 			// Where
 			$where = self::get_search_where();
 
-			// Group by
-			$group_by = self::get_search_group_by();
-
 			// Limit
 			$page_size = absint(apply_filters('wsf_submit_export_page_size', WS_FORM_SUBMIT_EXPORT_PAGE_SIZE));
 
@@ -1478,7 +1474,7 @@
 			if($page === 0) {
 
 				// Get form data
-				$records_total = self::db_read_count($join, $where, $group_by);
+				$records_total = self::db_read_count($join, $where);
 
 			} else {
 
@@ -1490,9 +1486,9 @@
 
 				$join,							// Join
 				$where,							// Where
-				$group_by,						// Group by
+				self::get_search_group_by(),	// Group by
 				self::get_search_order_by(),	// Order by
-				$page_size,							// Limit
+				$page_size,						// Limit
 				$offset,						// Offset
 				false,							// Get meta
 				false,							// Get expanded

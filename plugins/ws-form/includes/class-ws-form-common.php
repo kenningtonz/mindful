@@ -2741,8 +2741,10 @@
 										case 'submit_date_added_custom' :
 
 											$date_format = isset($variable_attribute_array[0]) ? $variable_attribute_array[0] : '';
-	
-											$parsed_variable = get_date_from_gmt($submit_date_added, $date_format);
+
+											$submit_date_added = self::get_object_var($submit, 'date_added', '');
+
+											$parsed_variable = !empty($submit_date_added) ? get_date_from_gmt($submit_date_added, $date_format) : '';
 
 											if($content_type == 'text/html') { $parsed_variable = htmlentities($parsed_variable); }
 
@@ -5209,7 +5211,11 @@
 		// Form object checksum check
 		public static function form_object_checksum_check($form_object) {
 
-			$return_value = false;
+			// Should checksum be checked?
+			if(!apply_filters('wsf_form_checksum_check', true)) {
+
+				return true;
+			}
 
 			// Check integrity of form_object
 			if(
@@ -5227,13 +5233,11 @@
 			unset($form_object_checksum_check->checksum);
 			$checksum_file = md5(wp_json_encode($form_object_checksum_check));
 
-			// Check checksum
-			if($checksum == $checksum_file) { $return_value = true; }
-
 			// Release memory
 			$form_object_checksum_check = null;
 
-			return $return_value;
+			// Check checksum
+			return ($checksum == $checksum_file);
 		}
 
 		// Get meta value array

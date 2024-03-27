@@ -1011,19 +1011,28 @@
 			$format_time = WS_Form_Common::get_object_meta_value($field_object, 'format_time', get_option('time_format'));
 			if(empty($format_time)) { $format_time = get_option('time_format'); }
 
+			// We'll use UTC so that wp_date doesn't offset the date
+			$utc = new DateTimeZone('UTC');
+
+			// Check WordPress version
+			$wp_new = WS_Form_Common::wp_version_at_least('5.3');
+
+			// Get time
+			$time = strtotime($pods_field_values);
+
 			switch($pods_field_type) {
-
-				case 'datetime' :
-
-					return gmdate($format_date . ' ' . $format_time, strtotime($pods_field_values));
 
 				case 'date' :
 
-					return gmdate($format_date, strtotime($pods_field_values));
+					return $wp_new ? wp_date($format_date, $time, $utc) : gmdate($format_date, $time);
+
+				case 'datetime' :
+
+					return $wp_new ? wp_date($format_date . ' ' . $format_time, $time, $utc) : gmdate($format_date . ' ' . $format_time, $time);
 
 				case 'time' :
 
-					return gmdate($format_time, strtotime($pods_field_values));
+					return $wp_new ? wp_date($format_time, $time, $utc) : gmdate($format_time, $time);
 			}
 
 			return '';

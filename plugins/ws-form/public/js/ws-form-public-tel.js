@@ -27,7 +27,7 @@
 			// Build config
 			var config = {
 
-				utilsScript: (ws_form_settings.url_plugin + 'public/js/external/utils.js?ver=17.0.13')
+				utilsScript: (ws_form_settings.url_plugin + 'public/js/external/utils.js?ver=19.2.19')
 			}
 
 			// Get field wrapper
@@ -93,7 +93,7 @@
 			var iti = window.intlTelInput($(this)[0], config);
 
 			// Set flag container height (so invalid feedback does not break the styling)
-			$('.iti__flag-container', field_wrapper_obj).css({height:$('input', field_wrapper_obj).outerHeight()});
+			$('.iti__flag-container', field_wrapper_obj).css({height:$('input[type="tel"]', field_wrapper_obj).outerHeight()});
 
 			// Get invalid feedback object
 			var invalid_feedback_obj = ws_this.get_invalid_feedback_obj($(this));

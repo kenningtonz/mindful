@@ -793,7 +793,7 @@
 			$ws_form_submit->form_id = $this->form_id;
 
 			// Get record count
-			$this->record_count = $ws_form_submit->db_read_count($ws_form_submit->get_search_join(), $ws_form_submit->get_search_where(), $ws_form_submit->get_search_group_by());
+			$this->record_count = $ws_form_submit->db_read_count($ws_form_submit->get_search_join(), $ws_form_submit->get_search_where());
 
 			return $this->record_count;
 		}
