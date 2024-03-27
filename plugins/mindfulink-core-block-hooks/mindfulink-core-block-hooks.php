@@ -16,7 +16,7 @@ function mindfulink_enqueue_block_editor_assets()
         filemtime(plugin_dir_path(__FILE__) . '/plugin.js')
     );
 }
-add_action('enqueue_block_editor_assets', 'mindfulink_enqueue_block_editor_assets');
+add_action('enqueue_block_editor_assets', 'mindfulink_enqueue_block_editor_assets', 2);
 
 function mindfulink_wp_enqueue_style() {
     $plugin_url = plugin_dir_url( __FILE__ );
@@ -40,5 +40,6 @@ function mindfulink_wp_enqueue_style() {
 }
 
 add_action( 'wp_enqueue_scripts', 'mindfulink_wp_enqueue_style' );
+
 
 ?>
