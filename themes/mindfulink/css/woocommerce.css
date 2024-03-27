@@ -1,0 +1,54 @@
+/*
+Theme Name: MindfulInk
+Author: Kennedy Adams
+Author URI: 
+Theme URI: 
+Tags: full-site-editing, block-patterns
+Text Domain: mindfulink
+Requires at least: 6.4
+Requires PHP: 7.4
+Tested up to: 6.4
+Version: 100.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Styles intended only for the front.*/
+.wp-block-add-to-cart-form button a,
+.wc-block-components-checkout-place-order-button,
+.single_add_to_cart_button,
+.wc-block-cart__submit-container a {
+	color: white;
+	text-decoration: none;
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-weight: bold;
+	background-color: var(--wp--preset--color--green-dark);
+	display: flex;
+	justify-content: center;
+	padding: 1rem 3rem;
+	align-items: center;
+	border-radius: 20px;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
+}
+
+.wc-block-catalog-sorting select {
+	color: white;
+	/* appearance: none; */
+	border: none;
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-weight: bold;
+	background-color: var(--wp--preset--color--green-dark);
+}
+
+.wc-block-catalog-sorting {
+	background-color: var(--wp--preset--color--green-dark);
+	display: flex;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	align-items: center;
+	border-radius: 20px;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
+}

@@ -12,50 +12,32 @@
 			"customDuotone": false,
 			"duotone": [
 				{
-					"colors": [
-						"#5a6eaa",
-						"#d6dbea"
-					],
+					"colors": ["#5a6eaa", "#d6dbea"],
 					"slug": "blue-lightblue",
 					"name": "Blue LightBlue"
 				},
 				{
-					"colors": [
-						"#8fb48e",
-						"#e0eddf"
-					],
+					"colors": ["#8fb48e", "#e0eddf"],
 					"slug": "green-lightgreen",
 					"name": "Green LightGreen"
 				},
 				{
-					"colors": [
-						"#a98bb1",
-						"#EADEED"
-					],
+					"colors": ["#a98bb1", "#EADEED"],
 					"slug": "lavender-lightlavender",
 					"name": "Lavender LightLavender"
 				},
 				{
-					"colors": [
-						"#d9c195",
-						"#f5ebda"
-					],
+					"colors": ["#d9c195", "#f5ebda"],
 					"slug": "gold-lightgold",
 					"name": "Gold LightGold"
 				},
 				{
-					"colors": [
-						"#b4a798",
-						"#e3dacf"
-					],
+					"colors": ["#b4a798", "#e3dacf"],
 					"slug": "taupe-lighttaupe",
 					"name": "Taupe LightTaupe"
 				},
 				{
-					"colors": [
-						"#B2A89A",
-						"#DED8CE"
-					],
+					"colors": ["#B2A89A", "#DED8CE"],
 					"slug": "primary-lightprimary",
 					"name": "Primary LightPrimary"
 				}
@@ -170,17 +152,12 @@
 		},
 		"layout": {
 			"contentSize": "1080px",
-			"wideSize": "1440px"
+			"wideSize": "1200px"
 		},
 		"spacing": {
 			"margin": true,
 			"padding": true,
-			"units": [
-				"rem",
-				"vh",
-				"vw",
-				"%"
-			]
+			"units": ["rem", "vh", "vw", "%"]
 		},
 		"typography": {
 			"dropCap": false,
@@ -200,9 +177,7 @@
 						{
 							"fontFamily": "Oldenburg",
 							"fontStyle": "normal",
-							"src": [
-								"file:./assets/fonts/oldenburg-v22-latin-regular.woff2"
-							]
+							"src": ["file:./assets/fonts/oldenburg-v22-latin-regular.woff2"]
 						}
 					]
 				},
@@ -215,41 +190,31 @@
 							"fontFamily": "Quicksand",
 							"fontStyle": "normal",
 							"fontWeight": "300",
-							"src": [
-								"file:./assets/fonts/quicksand-v31-latin-300.woff2"
-							]
+							"src": ["file:./assets/fonts/quicksand-v31-latin-300.woff2"]
 						},
 						{
 							"fontFamily": "Quicksand",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/quicksand-v31-latin-regular.woff2"
-							]
+							"src": ["file:./assets/fonts/quicksand-v31-latin-regular.woff2"]
 						},
 						{
 							"fontFamily": "Quicksand",
 							"fontStyle": "normal",
 							"fontWeight": "500",
-							"src": [
-								"file:./assets/fonts/quicksand-v31-latin-500.woff2"
-							]
+							"src": ["file:./assets/fonts/quicksand-v31-latin-500.woff2"]
 						},
 						{
 							"fontFamily": "Quicksand",
 							"fontStyle": "normal",
 							"fontWeight": "600",
-							"src": [
-								"file:./assets/fonts/quicksand-v31-latin-600.woff2"
-							]
+							"src": ["file:./assets/fonts/quicksand-v31-latin-600.woff2"]
 						},
 						{
 							"fontFamily": "Quicksand",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": [
-								"file:./assets/fonts/quicksand-v31-latin-700.woff2"
-							]
+							"src": ["file:./assets/fonts/quicksand-v31-latin-700.woff2"]
 						}
 					]
 				}
@@ -520,10 +485,7 @@
 		{
 			"name": "no-title",
 			"title": "No title",
-			"postTypes": [
-				"post",
-				"page"
-			]
+			"postTypes": ["post", "page"]
 		}
 	]
 }

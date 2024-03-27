@@ -1,0 +1,74 @@
+/*
+Theme Name: MindfulInk
+Plugin Name: MindfulInk Core Blocks
+Author: Kennedy Adams
+Text Domain: mindfulink
+Requires at least: 6.4
+Requires PHP: 7.4
+Tested up to: 6.4
+Version: 100.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+.is-style-post-template li {
+	border-radius: 0.5rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--blue-dark);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 24px;
+
+	background-color: var(--wp--preset--color--blue-light);
+}
+
+.is-style-post-template li h2 {
+	font-size: var(--wp--preset--font-size--large);
+	font-family: var(--wp--preset--font-family--serif);
+	margin: 0;
+	padding: 0;
+}
+
+.is-style-post-title {
+	font-size: var(--wp--preset--font-size--xx-large);
+	font-family: var(--wp--preset--font-family--serif);
+	margin: 0;
+	padding: 0;
+}
+
+.is-style-post-template li h2 a {
+	color: var(--wp--preset--color--blue-dark);
+	text-decoration: none;
+}
+
+.is-style-post-template li h2 a:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--wp--preset--color--blue-dark);
+}
+
+.is-style-post-excerpt {
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	color: var(--wp--preset--color--blue-dark);
+	margin: 0;
+	padding: 0;
+}
+
+.is-style-previous-post a,
+is-style-next-post a,
+.post-navigation-link-previous a,
+.post-navigation-link-next a {
+	color: white;
+	text-decoration: none;
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-weight: bold;
+	background-color: var(--wp--preset--color--blue-dark);
+	display: flex;
+	justify-content: center;
+	padding: 1rem 3rem;
+	align-items: center;
+	border-radius: 20px;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--blue);
+}

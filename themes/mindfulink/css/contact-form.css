@@ -1,0 +1,49 @@
+/*
+Theme Name: MindfulInk
+Author: Kennedy Adams
+Author URI: 
+Theme URI: 
+Tags: full-site-editing, block-patterns
+Text Domain: mindfulink
+Requires at least: 6.4
+Requires PHP: 7.4
+Tested up to: 6.4
+Version: 100.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Styles intended only for the front.*/
+
+#contactForm .formWrapper {
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+}
+
+#contactForm .formField {
+	border: 3px solid var(--wp--preset--color--lavender-dark);
+	border-radius: 10px;
+}
+
+#contactForm button.formField {
+	transition: transform 0.2s ease-in-out;
+	background-color: var(--wp--preset--color--lavender-dark);
+	color: white;
+}
+
+#contactForm button.formField:hover {
+	transform: scale(1.01);
+}
+
+#contactForm button.formField:active {
+	transform: scale(0.98);
+}
+
+#contactForm .formField:focus {
+	border: 3px solid var(--wp--preset--color--lavender);
+}
+
+#contactForm input[type="checkbox"].wsf-field:checked + label.wsf-label:before {
+	background-color: var(--wp--preset--color--lavender-dark);
+}

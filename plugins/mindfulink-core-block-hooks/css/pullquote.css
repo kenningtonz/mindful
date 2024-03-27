@@ -1,0 +1,49 @@
+/*
+Theme Name: MindfulInk
+Plugin Name: MindfulInk Core Blocks
+Author: Kennedy Adams
+Text Domain: mindfulink
+Requires at least: 6.4
+Requires PHP: 7.4
+Tested up to: 6.4
+Version: 100.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+.is-style-pullquote {
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	max-width: 600px !important;
+	text-align: center;
+	margin: 20px;
+	padding: 20px;
+	border-left: 4px solid var(--wp--preset--color--primary-dark);
+	border-radius: 30px;
+	border-right: 4px solid var(--wp--preset--color--primary-dark);
+	font-style: italic;
+}
+
+.is-style-pullquote p::before {
+	content: open-quote;
+	font-size: 3em;
+	line-height: 0.1em;
+	vertical-align: -0.3em;
+	padding-right: 1rem;
+}
+
+.is-style-pullquote p::after {
+	content: close-quote;
+	font-size: 3em;
+	line-height: 0.1em;
+	vertical-align: -0.3em;
+	padding-right: 1rem;
+}
+
+.is-style-pullquote cite {
+	font-size: var(--wp--preset--font-size--small);
+}
+
+.is-style-pullquote cite::before {
+	content: "- ";
+}

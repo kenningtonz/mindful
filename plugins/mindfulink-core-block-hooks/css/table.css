@@ -1,0 +1,68 @@
+/*
+Theme Name: MindfulInk
+Plugin Name: MindfulInk Core Blocks
+Author: Kennedy Adams
+Text Domain: mindfulink
+Requires at least: 6.4
+Requires PHP: 7.4
+Tested up to: 6.4
+Version: 100.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+.is-style-table {
+	border-radius: 10px;
+
+	background: white;
+	overflow: hidden;
+	box-shadow: 2px 2px 2px 1px var(--wp--preset--color--lavender);
+	width: 100%;
+	margin: 0 auto;
+}
+
+.is-style-table table {
+	border-collapse: collapse;
+}
+
+.is-style-table thead,
+.is-style-table tfoot {
+	border: none;
+}
+
+.is-style-table td,
+.is-style-table th {
+	padding-left: 8px;
+	border: none;
+}
+
+.is-style-table thead tr {
+	height: 60px;
+	background-color: var(--wp--preset--color--lavender-dark);
+	color: white;
+	font-family: var(--wp--preset--font-family--serif);
+}
+
+.is-style-table tr:nth-child(even) {
+	background-color: var(--wp--preset--color--lavender-light);
+}
+
+.is-style-table tfoot tr {
+	height: 60px;
+	font-weight: bold;
+	background-color: var(--wp--preset--color--lavender);
+}
+
+.is-style-table figcaption {
+	background-color: var(--wp--preset--color--lavender-dark);
+	padding: 8px;
+	color: white;
+}
+
+.is-style-table tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+.is-styled-table tbody tr:last-of-type {
+	border-bottom: 3px solid var(--wp--preset--color--lavender-dark);
+}

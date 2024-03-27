@@ -1,0 +1,22 @@
+/*
+Theme Name: MindfulInk
+Plugin Name: MindfulInk Core Blocks
+Author: Kennedy Adams
+Text Domain: mindfulink
+Requires at least: 6.4
+Requires PHP: 7.4
+Tested up to: 6.4
+Version: 100.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+.is-style-featured-image {
+	margin: 0;
+	height: 280px;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--blue-dark);
+	object-fit: cover;
+	overflow: hidden;
+}

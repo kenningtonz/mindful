@@ -1,0 +1,102 @@
+/*
+Theme Name: MindfulInk
+Plugin Name: MindfulInk Core Blocks
+Author: Kennedy Adams
+Text Domain: mindfulink
+Requires at least: 6.4
+Requires PHP: 7.4
+Tested up to: 6.4
+Version: 100.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+.is-style-card-lavender {
+	border-radius: 0.5rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--lavender-dark);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 24px;
+	background-color: var(--wp--preset--color--lavender-light);
+}
+
+.is-style-card-lavender .is-style-paragraph,
+.is-style-card-lavender .is-style-sub-heading {
+	color: var(--wp--preset--color--lavender-dark);
+	margin: 0;
+	padding: 0;
+}
+
+.is-style-card-blue {
+	border-radius: 0.5rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--blue-dark);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 24px;
+	/* max-width: 650px !important; */
+	background-color: var(--wp--preset--color--blue-light);
+}
+
+.is-style-card-blue .is-style-paragraph,
+.is-style-card-blue .is-style-heading {
+	color: var(--wp--preset--color--blue-dark);
+	margin: 0;
+	padding: 0;
+}
+
+.is-style-card-green {
+	border-radius: 0.5rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--green-dark);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 24px;
+	/* max-width: 650px !important; */
+	background-color: var(--wp--preset--color--green-light);
+}
+
+.is-style-card-green .is-style-paragraph,
+.is-style-card-green .is-style-heading {
+	color: var(--wp--preset--color--green-dark);
+	margin: 0;
+	padding: 0;
+}
+
+.is-style-card-gold {
+	border-radius: 0.5rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--gold-dark);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 24px;
+	/* max-width: 650px !important; */
+	background-color: var(--wp--preset--color--gold-light);
+}
+
+.is-style-card-gold .is-style-paragraph,
+.is-style-card-gold .is-style-heading {
+	color: var(--wp--preset--color--gold-dark);
+	margin: 0;
+	padding: 0;
+}
+
+.is-style-card-taupe {
+	border-radius: 0.5rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--taupe-dark);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 24px;
+	margin: 0;
+	/* max-width: 650px !important; */
+	background-color: var(--wp--preset--color--taupe-light);
+}
+
+.is-style-card-taupe .is-style-paragraph,
+.is-style-card-taupe .is-style-heading {
+	color: var(--wp--preset--color--taupe-dark);
+	margin: 0;
+	padding: 0;
+}

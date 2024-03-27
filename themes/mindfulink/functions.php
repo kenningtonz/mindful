@@ -17,6 +17,9 @@
  */
 function mindfulink_wp_enqueue_scripts()
 {
+	wp_enqueue_style( 'contact-form',  get_template_directory_uri() .'/css/contact-form.css', [], 	wp_get_theme()->get('Version') );
+	wp_enqueue_style( 'woocommerce',  get_template_directory_uri() .'/css/woocommerce.css', [], 	wp_get_theme()->get('Version') );
+
 	wp_enqueue_style(
 		'style',
 		get_stylesheet_uri(),
