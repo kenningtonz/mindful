@@ -1,5 +1,43 @@
 == Changelog ==
 
+= 1.9.199 - 03/24/2024 =
+* Added: ACF meta mapping in post data source now outputs as formatted value
+* Bug Fix: Row population in submission admin page
+* Bug Fix: Small typo in WordPress block
+
+= 1.9.198 - 03/18/2024 =
+* Added: Default value setting on select, checkbox and radio fields
+
+= 1.9.197 - 03/17/2024 =
+* Added: Transform on email field
+
+= 1.9.196 - 03/03/2024 =
+* Bug Fix: Date handling in custom field integrations when populating a form
+
+= 1.9.195 - 03/01/2024 =
+* Bug Fix: Updated ITI flag images
+
+= 1.9.194 - 02/29/2024 =
+* Added: #acos, #asin, #atan variables
+* Added: Update ITI libary
+* Added: wsf_form_checksum_check filter hook
+* Added: #calc performance improvement by reducing duplicate calculations
+* Changed: Removed transform setting on email field due to incompatibility
+* Bug Fix: Repeatable section changes breaking #calc array
+* Bug Fix: Fix to #calc handling of price range fields
+
+= 1.9.193 - 02/12/2024 =
+* Added: Support for Save on WooCommerce product with variations
+* Bug Fix: Progress calculation for checkbox fields with min / max parameters
+* Bug Fix: Submissions page selector
+* Bug Fix: JetEngine data source when using glossary
+
+= 1.9.192 - 02/08/2024 =
+* Bug Fix: Meta data generation when creating form from action.
+
+= 1.9.191 - 02/07/2024 =
+* Bug Fix: Run JavaScript action
+
 = 1.9.190 - 02/07/2024 =
 * Bug Fix: Minor code change in submit classes to maintain compatibility with EOL PHP versions
 

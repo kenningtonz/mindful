@@ -158,7 +158,6 @@
 
 			// Check for glossary
 			if(
-
 				isset($jetengine_field_object['options_from_glossary']) &&
 				$jetengine_field_object['options_from_glossary']
 			) {
@@ -250,8 +249,8 @@
 			return array(
 
 				'data_source_' . $this->id . '_field_name',
-				'data_source_' . $this->id . '_filter_by_post',
-				'data_source_' . $this->id . '_filter_by_post_id'
+//				'data_source_' . $this->id . '_filter_by_post',
+//				'data_source_' . $this->id . '_filter_by_post_id'
 			);
 		}
 

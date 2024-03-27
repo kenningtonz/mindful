@@ -1269,7 +1269,7 @@
 					'keywords'					=> array(WS_FORM_NAME_PRESENTABLE, __('form', 'ws-form')),
 					'preview'					=> $preview,
 					'no_forms'					=> __("You haven't created any forms yet.", 'ws-form'),
-					'form_not_selected'			=> __('Choose the form you would like add in the block settings sidebar.', 'ws-form'),
+					'form_not_selected'			=> __('From the block settings sidebar, choose the form you would like to add.', 'ws-form'),
 					'form_id_options_label'		=> __('Form', 'ws-form'),
 					'form_id_options_select'	=> __('Select...', 'ws-form'),
 					'form_element_id_label'		=> __('ID (Optional)', 'ws-form'),

@@ -2550,7 +2550,7 @@
 									case 'select_count' :
 
 										// Get field selected options
-										var field_obj = $('select[name="' + this.esc_selector(field_name) + '[]"] :selected', this.form_canvas_obj);
+										var field_obj = $('select[name="' + this.esc_selector(field_name) + '[]"] option:not([data-placeholder]):selected', this.form_canvas_obj);
 
 										break;
 								}
@@ -2615,6 +2615,9 @@
 								break;
 
 							case 'abs' :
+							case 'acos' :
+							case 'asin' :
+							case 'atan' :
 							case 'ceil' :
 							case 'cos' :
 							case 'exp' :
@@ -2635,6 +2638,21 @@
 									case 'abs' :
 
 										parsed_variable = Math.abs(number_input);
+										break;
+
+									case 'acos' :
+
+										parsed_variable = Math.acos(number_input);
+										break;
+
+									case 'asin' :
+
+										parsed_variable = Math.asin(number_input);
+										break;
+
+									case 'atan' :
+
+										parsed_variable = Math.atan(number_input);
 										break;
 
 									case 'ceil' :
@@ -4784,7 +4802,7 @@
 		// Get default value
 		if(!has_value) {
 
-			var value = '';
+			value = '';
 			if(default_value != '') { value = this.esc_html(default_value); }
 			if(text_editor != '') { value = text_editor; }
 			if(html_editor != '') { value = html_editor; }
@@ -4800,6 +4818,23 @@
 			case 'textarea' :
 
 				process_input_group = (this.get_object_meta_value(field, 'input_type_textarea', '') === '');
+				break;
+
+			case 'select' :
+			case 'checkbox' :
+			case 'radio' :
+			case 'price_select' :
+			case 'price_checkbox' :
+			case 'price_radio' :
+
+				if(value) {
+
+					// Split comma separate values into a trimmed value array
+					value = (typeof(value) === 'string') ? value.split(',').map(function(value) { return value.trim(); }) : value;
+
+					has_value = true;
+				}
+
 				break;
 
 		}
@@ -5536,7 +5571,7 @@
 							}
 
 							// Store before any encoding
-							mask_values_row[mask_row_lookup + '_compare'] = mask_row_lookup_value;
+							mask_values_row[mask_row_lookup + '_compare'] = this.esc_html(mask_row_lookup_value);
 
 							// Check for HTML encoding or a price
 							var price = false;

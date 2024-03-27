@@ -503,7 +503,7 @@
 
 										array(
 											'label'		=>	__('Restrictions', 'ws-form'),
-											'meta_keys'	=> array('disabled', 'readonly', 'min', 'max', 'step', 'field_user_status', 'field_user_roles', 'field_user_capabilities')
+											'meta_keys'	=> array('disabled', 'readonly', 'min', 'max', 'field_user_status', 'field_user_roles', 'field_user_capabilities')
 										),
 
 										array(
@@ -721,7 +721,7 @@
 
 							// Fields
 							'mask_field'						=>	'#pre_label#pre_help<input type="email" id="#id" name="#name" value="#value"#attributes />#post_label#datalist#invalid_feedback#post_help',
-							'mask_field_attributes'				=>	array('class', 'multiple_email', 'min_length', 'max_length', 'pattern', 'list', 'disabled', 'readonly', 'required', 'placeholder', 'aria_describedby', 'aria_labelledby', 'aria_label', 'custom_attributes', 'autocomplete_email', 'hidden_bypass', 'transform'),
+							'mask_field_attributes'				=>	array('class', 'multiple_email', 'min_length', 'max_length', 'pattern', 'list', 'disabled', 'readonly', 'required', 'placeholder', 'aria_describedby', 'aria_labelledby', 'aria_label', 'custom_attributes', 'autocomplete_email', 'transform', 'hidden_bypass'),
 							'mask_field_label'					=>	'<label id="#label_id" for="#id"#attributes>#label</label>',
 							'mask_field_label_attributes'		=>	array('class'),
 
@@ -1016,7 +1016,7 @@
 								'basic'	=> array(
 
 									'label'			=>	__('Basic', 'ws-form'),
-									'meta_keys'		=> array('label_render', 'required', 'hidden', 'multiple', 'size', 'placeholder_row', 'help', 'autocomplete'),
+									'meta_keys'		=> array('label_render', 'required', 'hidden', 'multiple', 'default_value_select', 'size', 'placeholder_row', 'help', 'autocomplete'),
 
 									'fieldsets'		=>	array(
 
@@ -1148,7 +1148,7 @@
 								'basic'	=> array(
 
 									'label'		=>	__('Basic', 'ws-form'),
-									'meta_keys'	=>	array('label_render_off', 'hidden', 'select_all', 'select_all_label', 'help'),
+									'meta_keys'	=>	array('label_render_off', 'hidden', 'select_all', 'select_all_label', 'default_value_checkbox', 'help'),
 
 									'fieldsets'	=>	array(
 
@@ -1278,7 +1278,7 @@
 								'basic'	=> array(
 
 									'label'			=>	__('Basic', 'ws-form'),
-									'meta_keys'		=>	array('label_render', 'required_attribute_no', 'hidden', 'help'),
+									'meta_keys'		=>	array('label_render', 'required_attribute_no', 'hidden', 'default_value_radio', 'help'),
 
 									'fieldsets'		=>	array(
 
@@ -5329,6 +5329,42 @@
 					'select_list_for_type'		=>	'text',
 					'calc'						=>	true,
 					'calc_for_type'				=>	'text'
+				),
+
+				// Sets options as selected (unless saved value exists)
+				'default_value_select' => array(
+
+					'label'						=>	__('Default Value', 'ws-form'),
+					'type'						=>	'text',
+					'default'					=>	'',
+					'help'						=>	__('Default option value(s) selected. Supports comma separated values. Overrides selected rows in Options tab.', 'ws-form'),
+					'key'						=>	'default_value',
+					'select_list'				=>	true,
+					'calc'						=>	true
+				),
+
+				// Sets checkboxes as checked (unless saved value exists)
+				'default_value_checkbox' => array(
+
+					'label'						=>	__('Default Value', 'ws-form'),
+					'type'						=>	'text',
+					'default'					=>	'',
+					'help'						=>	__('Default checkbox value(s) checked. Supports comma separated values. Overrides selected rows in Checkboxes tab.', 'ws-form'),
+					'key'						=>	'default_value',
+					'select_list'				=>	true,
+					'calc'						=>	true
+				),
+
+				// Sets radios as checked (unless saved value exists)
+				'default_value_radio' => array(
+
+					'label'						=>	__('Default Value', 'ws-form'),
+					'type'						=>	'text',
+					'default'					=>	'',
+					'help'						=>	__('Default radio value checked. Overrides selected rows in Radios tab.', 'ws-form'),
+					'key'						=>	'default_value',
+					'select_list'				=>	true,
+					'calc'						=>	true
 				),
 
 
@@ -9519,6 +9555,42 @@
 							),
 
 							'description' => __('Returns the absolute value of a number.', 'ws-form')
+						),
+
+						'acos'			=>	array(
+
+							'label' => __('Inverse Cosine', 'ws-form'),
+
+							'attributes' => array(
+
+								array('id' => 'number', 'required' => false),
+							),
+
+							'description' => __('Returns the inverse cosine of a number in radians.', 'ws-form')
+						),
+
+						'asin'			=>	array(
+
+							'label' => __('Inverse Sine', 'ws-form'),
+
+							'attributes' => array(
+
+								array('id' => 'number', 'required' => false),
+							),
+
+							'description' => __('Returns the inverse sine of a number in radians.', 'ws-form')
+						),
+
+						'atan'			=>	array(
+
+							'label' => __('Inverse Tangent', 'ws-form'),
+
+							'attributes' => array(
+
+								array('id' => 'number', 'required' => false),
+							),
+
+							'description' => __('Returns the inverse tangent of a number in radians.', 'ws-form')
 						),
 
 						'ceil'			=>	array(

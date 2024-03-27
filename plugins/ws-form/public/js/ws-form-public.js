@@ -591,11 +591,27 @@
 
 		var input_value = obj.val();
 
+		switch(obj.attr('type')) {
+
+			// Does not support setSelectionRange
+			case 'email' :
+
+				var set_selection_range = false;
+				break;
+
+			default :
+
+				var set_selection_range = true;
+		}
+
 		if(input_value && (typeof(input_value) === 'string')) {
 
 			// Remember cursor position
-			var pos_start = obj[0].selectionStart;
-			var pos_end = obj[0].selectionEnd;
+			if(set_selection_range) {
+
+				var pos_start = obj[0].selectionStart;
+				var pos_end = obj[0].selectionEnd;
+			}
 
 			// Set value
 			switch(transform_method) {
@@ -622,7 +638,10 @@
 			}
 
 			// Recover cursor position
-			obj[0].setSelectionRange(pos_start, pos_end);
+			if(set_selection_range) {
+
+				obj[0].setSelectionRange(pos_start, pos_end);
+			}
 		}
 	}
 
@@ -2323,6 +2342,16 @@
 		if(action_id > 0) {
 
 			form_data.append('wsf_action_id', action_id);
+		}
+
+		// If this is not a submit, there are some form data elements we should remove to avoid conflicting with WooCommerce
+		if(post_mode !== 'submit') {
+
+			// WooCommerce
+			form_data.delete('quantity');
+			form_data.delete('add-to-cart');
+			form_data.delete('product_id');
+			form_data.delete('variation_id');
 		}
 
 		// ITI tel field processing

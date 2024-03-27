@@ -1026,9 +1026,9 @@
 		}
 
 		// Get value of an object, otherwise return false if not set
-		public function get_object_value($field, $key) {
+		public function get_object_value($field, $key, $default_value = false) {
 
-			return isset($field->{$key}) ? $field->{$key} : false;
+			return isset($field->{$key}) ? $field->{$key} : $default_value;
 		}
 
 		// Get all actions that have the capabilities provided (string or array for capabilities)
@@ -1588,7 +1588,7 @@
 					$form_action_meta = isset($form_action_config['meta']) ? $form_action_config['meta'] : array();
 
 					// Parse meta
-					$form_action_meta = self::get_action_parse($form_action_meta, $field_mapping_action, $tag_mapping_action, $form_field_id_lookup_all);
+					$form_action_meta = self::get_action_parse($form_action_meta, $field_mapping_action, $tag_mapping_action, $form_field_id_lookup, $form_field_id_lookup_all);
 
 					// Add action
 					$meta_action['groups'][0]['rows'][] = self::update_form_action($form_action_index++, $form_action_id, $form_action_meta, $form_action_config);
@@ -1649,14 +1649,14 @@
 			return true;
 		}
 
-		public static function get_action_parse($form_action_meta, $field_mapping_action, $tag_mapping_action, $form_field_id_lookup_all) {
+		public static function get_action_parse($form_action_meta, $field_mapping_action, $tag_mapping_action, $form_field_id_lookup, $form_field_id_lookup_all) {
 
 			foreach($form_action_meta as $form_action_meta_key => $form_action_meta_value) {
 
 				// Check for nested arrays
 				if(is_array($form_action_meta_value)) {
 
-					$form_action_meta[$form_action_meta_key] = self::get_action_parse($form_action_meta_value, $field_mapping_action, $tag_mapping_action, $form_field_id_lookup_all);
+					$form_action_meta[$form_action_meta_key] = self::get_action_parse($form_action_meta_value, $field_mapping_action, $tag_mapping_action, $form_field_id_lookup, $form_field_id_lookup_all);
 					continue;
 				}
 
@@ -1677,7 +1677,7 @@
 					default :
 
 						// Direct replacements
-						if(isset($form_field_id_lookup_all[$form_action_meta_value])) {
+						if(isset($form_field_id_lookup[$form_action_meta_value])) {
 
 							$form_action_meta[$form_action_meta_key] = $form_field_id_lookup[$form_action_meta_value];
 						}
