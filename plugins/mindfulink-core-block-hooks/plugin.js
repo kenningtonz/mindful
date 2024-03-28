@@ -113,6 +113,11 @@ wp.blocks.registerBlockStyle("core/query-pagination-next", {
 	label: "Next Post",
 });
 
+wp.blocks.registerBlockStyle("core/post-navigation-link", {
+	name: "nav-post",
+	label: "Nav Post",
+});
+
 wp.blocks.registerBlockStyle("core/post-template", {
 	name: "post-template",
 	label: "Post Template",
@@ -161,4 +166,9 @@ wp.blocks.registerBlockStyle("core/button", {
 wp.blocks.registerBlockStyle("core/button", {
 	name: "button-taupe",
 	label: "Button Taupe",
+});
+
+wp.blocks.registerBlockStyle("core/image", {
+	name: "image",
+	label: "Image",
 });

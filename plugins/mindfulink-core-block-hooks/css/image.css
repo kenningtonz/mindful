@@ -1,0 +1,8 @@
+.is-style-image {
+	border-radius: 0.8rem;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--primary-dark);
+}
+
+.is-style-image img {
+	border-radius: 0.8rem;
+}

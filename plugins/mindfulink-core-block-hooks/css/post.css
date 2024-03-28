@@ -56,9 +56,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .is-style-previous-post a,
-is-style-next-post a,
-.post-navigation-link-previous a,
-.post-navigation-link-next a {
+.is-style-next-post a,
+.is-style-nav-post a {
 	color: white;
 	text-decoration: none;
 	font-size: var(--wp--preset--font-size--medium);
@@ -66,9 +65,23 @@ is-style-next-post a,
 	font-weight: bold;
 	background-color: var(--wp--preset--color--blue-dark);
 	display: flex;
+	border-radius: 20px;
 	justify-content: center;
 	padding: 1rem 3rem;
 	align-items: center;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--blue-darker);
+}
+
+.is-style-nav-post,
+.is-style-previous-post,
+.is-style-next-post {
 	border-radius: 20px;
-	box-shadow: 0 2px 2px 0px var(--wp--preset--color--blue);
+	margin: 0;
+	cursor: pointer;
+}
+
+.is-style-nav-post a:hover,
+.is-style-previous-post a:hover,
+.is-style-next-post a:hover {
+	background-color: var(--wp--preset--color--blue-darker);
 }
