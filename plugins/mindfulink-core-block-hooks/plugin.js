@@ -1,11 +1,21 @@
 wp.blocks.registerBlockStyle("core/heading", {
-	name: "heading",
-	label: "Heading",
+	name: "h1",
+	label: "H1",
 });
 
 wp.blocks.registerBlockStyle("core/heading", {
-	name: "sub-heading",
-	label: "Sub Heading",
+	name: "h2",
+	label: "H2",
+});
+
+wp.blocks.registerBlockStyle("core/heading", {
+	name: "h3",
+	label: "H3",
+});
+
+wp.blocks.registerBlockStyle("core/heading", {
+	name: "h4",
+	label: "H4",
 });
 
 wp.blocks.registerBlockStyle("core/pullquote", {
@@ -126,4 +136,29 @@ wp.blocks.registerBlockStyle("core/query-title", {
 wp.blocks.registerBlockStyle("core/post-excerpt", {
 	name: "post-excerpt",
 	label: "Post Excerpt",
+});
+
+wp.blocks.registerBlockStyle("core/button", {
+	name: "button-blue",
+	label: "Button Blue",
+});
+
+wp.blocks.registerBlockStyle("core/button", {
+	name: "button-green",
+	label: "Button Green",
+});
+
+wp.blocks.registerBlockStyle("core/button", {
+	name: "button-gold",
+	label: "Button Gold",
+});
+
+wp.blocks.registerBlockStyle("core/button", {
+	name: "button-lavender",
+	label: "Button Lavender",
+});
+
+wp.blocks.registerBlockStyle("core/button", {
+	name: "button-taupe",
+	label: "Button Taupe",
 });

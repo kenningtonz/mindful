@@ -48,81 +48,51 @@
 					"color": "#1e1e1e",
 					"name": "Base"
 				},
+
+				{ "slug": "blue-lighter", "color": "#e6ebf3", "name": "BlueLighter" },
+				{ "slug": "blue-light", "color": "#d2dbeb", "name": "BlueLight" },
+				{ "slug": "blue", "color": "#C0D2FC", "name": "Blue" },
+				{ "slug": "blue-er", "color": "#5a6eaa", "name": "Blue-er" },
+				{ "slug": "blue-est", "color": "#4b5582", "name": "Blue-est" },
+				{ "slug": "blue-dark", "color": "#3f4769", "name": "BlueDark" },
+				{ "slug": "blue-darker", "color": "#2a2e41", "name": "BlueDarker" },
+
+				{ "slug": "green-lighter", "color": "#e2ebe0", "name": "greenLighter" },
+				{ "slug": "green-light", "color": "#c4d8c2", "name": "greenLight" },
+				{ "slug": "green", "color": "#8fb48e", "name": "Green" },
+				{ "slug": "green-er", "color": "#4d7c4f", "name": "Green-er" },
+				{ "slug": "green-est", "color": "#2e4e31", "name": "Green-est" },
+				{ "slug": "green-dark", "color": "#144113", "name": "GreenDark" },
+				{ "slug": "green-darker", "color": "#111d12", "name": "GreenDarker" },
+
 				{
-					"slug": "blueDark",
-					"color": "#283d50",
-					"name": "Blue"
+					"slug": "lavender-lighter",
+					"color": "#f4f1f6",
+					"name": "LavenderLighter"
 				},
-				{
-					"slug": "blue",
-					"color": "#5a6eaa",
-					"name": "Blue"
-				},
-				{
-					"slug": "blueLight",
-					"color": "#d6dbea",
-					"name": "BlueLight"
-				},
-				{
-					"slug": "greenDark",
-					"color": "#144113",
-					"name": "GreenDark"
-				},
-				{
-					"slug": "green",
-					"color": "#8fb48e",
-					"name": "Green"
-				},
-				{
-					"slug": "greenLight",
-					"color": "#e0eddf",
-					"name": "GreenLight"
-				},
-				{
-					"slug": "lavenderDark",
-					"color": "#431a4f",
-					"name": "LavenderDark"
-				},
-				{
-					"slug": "lavender",
-					"color": "#a98bb1",
-					"name": "Lavender"
-				},
-				{
-					"slug": "lavenderLight",
-					"color": "#EADEED",
-					"name": "LavenderLight"
-				},
-				{
-					"slug": "goldDark",
-					"color": "#49391d",
-					"name": "GoldDark"
-				},
-				{
-					"slug": "gold",
-					"color": "#d9c195",
-					"name": "Gold"
-				},
-				{
-					"slug": "goldLight",
-					"color": "#f5ebda",
-					"name": "GoldLight"
-				},
-				{
-					"slug": "taupeDark",
-					"color": "#6e491e",
-					"name": "TaupeDark"
-				},
-				{
-					"slug": "taupe",
-					"color": "#b4a798",
-					"name": "Taupe"
-				},
-				{
-					"slug": "taupeLight",
-					"color": "#e3dacf",
-					"name": "TaupeLight"
-				},
+				{ "slug": "lavender-light", "color": "#ddd1e1", "name": "LavenderLight" },
+				{ "slug": "lavender", "color": "#a98bb1", "name": "Lavender" },
+				{ "slug": "lavender-er", "color": "#84658b", "name": "Lavender-er" },
+				{ "slug": "lavender-est", "color": "#5E3769", "name": "Lavender-est" },
+				{ "slug": "lavender-dark", "color": "#431a4f", "name": "LavenderDark" },
+				{ "slug": "lavender-darker", "color": "#371542", "name": "LavenderDarker" },
+
+				{ "slug": "gold-lighter", "color": "#f4eee0", "name": "GoldLighter" },
+				{ "slug": "gold-light", "color": "#e8dac0", "name": "GoldLight" },
+				{ "slug": "gold", "color": "#d9c195", "name": "Gold" },
+				{ "slug": "gold-er", "color": "#bf8d50", "name": "Gold-er" },
+				{ "slug": "gold-est", "color": "#93613b", "name": "Gold-est" },
+				{ "slug": "gold-dark", "color": "#61412d", "name": "GoldDark" },
+				{ "slug": "gold-darker", "color": "#342116", "name": "GoldDarker" },
+
+				{ "slug": "taupe-lighter", "color": "#edebe7", "name": "TaupeLighter" },
+				{ "slug": "taupe-light", "color": "#DBD5CD", "name": "TaupeLight" },
+				{ "slug": "taupe", "color": "#b4a798", "name": "Taupe" },
+				{ "slug": "taupe-er", "color": "#8d7869", "name": "Taupe-er" },
+				{ "slug": "taupe-est", "color": "#766458", "name": "Taupe-est" },
+				{ "slug": "taupe-dark", "color": "#50453e", "name": "TaupeDark" },
+				{ "slug": "taupe-darker", "color": "#2a2320", "name": "TaupeDarker" },
+
 				{
 					"slug": "white",
 					"color": "#ffffff",
@@ -242,20 +212,29 @@
 					}
 				},
 				{
-					"slug": "extra-large",
-					"size": "2.25rem",
+					"slug": "x-large",
+					"size": "2rem",
 					"name": "XL",
 					"fluid": {
-						"min": "2rem",
-						"max": "2.25rem"
+						"min": "1.75rem",
+						"max": "2rem"
 					}
 				},
 				{
 					"slug": "xx-large",
-					"size": "3rem",
+					"size": "2.25rem",
 					"name": "XX:",
 					"fluid": {
 						"min": "2.25rem",
+						"max": "2.75rem"
+					}
+				},
+				{
+					"slug": "xxx-large",
+					"size": "3rem",
+					"name": "XX:",
+					"fluid": {
+						"min": "2.75rem",
 						"max": "3rem"
 					}
 				}

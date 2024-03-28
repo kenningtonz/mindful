@@ -96,3 +96,9 @@ a:where(:not(.wp-element-button)):hover {
 		flex: 1 1 73%;
 	}
 }
+
+.wp-container-core-group-layout-4.wp-container-core-group-layout-4
+	> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}

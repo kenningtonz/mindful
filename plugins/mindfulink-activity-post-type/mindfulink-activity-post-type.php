@@ -145,3 +145,12 @@ function activity_taxonomies()
 }
 
 add_action('init', 'activity_taxonomies', 0);
+
+function mindfulink_wp_enqueue_style2()
+{
+    $plugin_url = plugin_dir_url(__FILE__);
+
+    wp_enqueue_style('activity',  $plugin_url . "/css/activity.css");
+}
+
+add_action('wp_enqueue_scripts', 'mindfulink_wp_enqueue_style2');

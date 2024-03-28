@@ -36,3 +36,13 @@ wp.blocks.registerBlockVariation("core/post-terms", {
 		providerNameSlug: "activity-effort-levels",
 	},
 });
+
+wp.blocks.registerBlockStyle("core/query-pagination-previous", {
+	name: "previous-activity",
+	label: "Previous Activity",
+});
+
+wp.blocks.registerBlockStyle("core/query-pagination-next", {
+	name: "next-activity",
+	label: "Next Activity",
+});

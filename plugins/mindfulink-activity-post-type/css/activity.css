@@ -1,0 +1,17 @@
+.is-style-previous-activity a,
+is-style-next-activity a,
+.activity-navigation-link-previous a,
+.activity-navigation-link-next a {
+	color: white;
+	text-decoration: none;
+	font-size: var(--wp--preset--font-size--medium);
+	font-family: var(--wp--preset--font-family--sans-serif);
+	font-weight: bold;
+	background-color: var(--wp--preset--color--gold-dark);
+	display: flex;
+	justify-content: center;
+	padding: 1rem 3rem;
+	align-items: center;
+	border-radius: 20px;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--gold--blue);
+}
