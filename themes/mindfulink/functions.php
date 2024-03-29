@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functions and definitions
  *
@@ -17,8 +18,8 @@
  */
 function mindfulink_wp_enqueue_scripts()
 {
-	wp_enqueue_style( 'contact-form',  get_template_directory_uri() .'/css/contact-form.css', [], 	wp_get_theme()->get('Version') );
-	wp_enqueue_style( 'woocommerce',  get_template_directory_uri() .'/css/woocommerce.css', [], 	wp_get_theme()->get('Version') );
+	wp_enqueue_style('contact-form',  get_template_directory_uri() . '/css/contact-form.css', [], 	wp_get_theme()->get('Version'));
+	wp_enqueue_style('woocommerce',  get_template_directory_uri() . '/css/woocommerce.css', [], 	wp_get_theme()->get('Version'));
 
 	wp_enqueue_style(
 		'style',
@@ -44,7 +45,6 @@ add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mime
 		'type' => $filetype['type'],
 		'proper_filename' => $data['proper_filename']
 	];
-
 }, 10, 4);
 
 function cc_mime_types($mimes)
@@ -66,3 +66,32 @@ function fix_svg()
 add_action('admin_head', 'fix_svg');
 
 
+//https://developer.wordpress.org/plugins/shortcodes/shortcodes-with-parameters/
+//https://generatepress.com/forums/topic/using-custom-fields-in-html-block/
+function custom_post_subtitle($atts = [])
+{
+
+	// Setup our HTML output
+	$html = '';
+
+	// normalize attribute keys, lowercase
+	$atts = array_change_key_case((array) $atts, CASE_LOWER);
+
+	// override default attributes with user attributes
+	$code_atts = shortcode_atts(
+		array(
+			'tag' => 'h2',
+		),
+		$atts,
+		'show_post_subtitle'
+	);
+
+	// Get the custom field titled: subtitle
+	$id = get_post_meta(get_the_id(), 'subtitle', true);
+	if (!empty($id)) {
+		$html = sprintf('<%2$s class="is-style-%2$s">%1$s</%2$s>', $id, $code_atts['tag']);
+	}
+
+	return $html;
+}
+add_shortcode('show_post_subtitle', 'custom_post_subtitle');

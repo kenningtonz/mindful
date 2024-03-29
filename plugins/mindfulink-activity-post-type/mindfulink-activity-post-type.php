@@ -90,29 +90,28 @@ function activity_taxonomies()
                 'menu_name' => 'Materials'
             ],
             'hierarchical' => false,
-            'rewrite' => array('slug' => 'activities?material=', 'with_front' => false),
+            // 'rewrite' => array('slug' => 'activities?material=', 'with_front' => false),
             'show_admin_column' => true,
             'show_in_rest' => true,
         ]
     );
     register_taxonomy(
-        'effort_level',
+        'effort',
         ['activity'],
         [
             'labels' => [
-                'name' => 'Effort Level',
-                'singular_name' => 'Effort Level',
-                'search_items' => 'Search Effort Levels',
-                'all_items' => 'All Effort Levels',
-                'edit_item' => 'Edit Effort Level',
-                'update_item' => 'Update Effort Level',
-                'add_new_item' => 'Add New Effort Level',
-                'new_item_name' => 'New Effort Level Name',
-                'menu_name' => 'Effort Levels'
+                'name' => 'Effort',
+                'singular_name' => 'Effort',
+                'search_items' => 'Search Effort',
+                'all_items' => 'All Effort',
+                'edit_item' => 'Edit Effort',
+                'update_item' => 'Update Effort',
+                'add_new_item' => 'Add New Effort',
+                'new_item_name' => 'New Effort Name',
+                'menu_name' => 'Effort'
             ],
-            'rewrite' => array('slug' => 'activities?effort-level=', 'with_front' => false),
+            // 'rewrite' => array('slug' => 'activities?effort=', 'with_front' => false),
             'hierarchical' => false,
-            'has_archive' => true, // 'effort-levels
             'show_admin_column' => true,
             'show_in_rest' => true,
         ]
@@ -132,15 +131,33 @@ function activity_taxonomies()
                 'new_item_name' => 'New Type Name',
                 'menu_name' => 'Types'
             ],
-            'rewrite' => array('slug' => 'activities?type=', 'with_front' => false),
+            // 'rewrite' => array('slug' => 'activities?type=', 'with_front' => false),
             'hierarchical' => true,
             'show_admin_column' => true,
             'show_in_rest' => true,
         ]
     );
+    // add_rewrite_rule('^recipes-with-(.*)/page/([0-9]+)?$','index.php?ingredient=$matches[1]&paged=$matches[2]','top');
+    add_rewrite_rule('^effort(.*)/?', 'index.php?effort=$matches[1]', 'top');
+    add_rewrite_rule('^material(.*)/?', 'index.php?material=$matches[1]', 'top');
+    add_rewrite_rule('^a-type(.*)/?', 'index.php?type=$matches[1]', 'top');
 }
 
 add_action('init', 'activity_taxonomies', 0);
+
+add_filter('term_link', 'change_permalinks', 10, 2);
+
+function change_permalinks($permalink, $term)
+{
+    if ($term->taxonomy == 'effort') {
+        $permalink = str_replace('effort/', 'activities?effort=', $permalink);
+    } else if ($term->taxonomy == 'material') {
+        $permalink = str_replace('material/', 'activities?material=', $permalink);
+    } else if ($term->taxonomy == 'a-type') {
+        $permalink = str_replace('a-type/', 'activities?type=', $permalink);
+    }
+    return $permalink;
+}
 
 function mindfulink_wp_enqueue_style2()
 {
@@ -154,30 +171,39 @@ add_action('wp_enqueue_scripts', 'mindfulink_wp_enqueue_style2');
 
 // function generate_taxonomy_rewrite_rules($wp_rewrite)
 // {
-//     $rules = array();
-//     $post_types = get_post_types(array('name' => 'activity', 'public' => true, '_builtin' => false), 'objects');
-//     $taxonomies = get_taxonomies(array('name' => 'type', 'public' => true, '_builtin' => false), 'objects');
-
-//     foreach ($post_types as $post_type) {
-//         $post_type_name = $post_type->name; // 'activity'
-//         $post_type_slug = $post_type->rewrite['slug']; // 'activities'
-
-//         foreach ($taxonomies as $taxonomy) {
-//             $taxonomy_slug = $taxonomy->rewrite['slug']; // 'activities'
-
-//             if ($taxonomy->object_type[0] == $post_type_name) {
-//                 $terms = get_categories(array('type' => $post_type_name, 'taxonomy' => $taxonomy->name, 'hide_empty' => 0));
-//                 foreach ($terms as $term) {
-//                     $rules[$taxonomy_slug . '/' . $term->slug . '/?'] = 'index.php?' . '/' . $post_type_slug  . '?type' . '=' . $term->slug;
-//                 }
-//             }
-//         }
+//     $typeTerms = get_categories(array('type' => 'activity', 'taxonomy' => 'a-type', 'hide_empty' => 0));
+//     foreach ($typeTerms as $term) {
+//         add_rewrite_rule(
+//             'activities?type=/' . $term->slug,
+//             'index.php?' . '/activities?type=' . $term->slug,
+//             'top'
+//         );
 //     }
-//     $wp_rewrite->rules = $rules + $wp_rewrite->rules; // Add custom rules to existing rewrite rules
-//     // $activities_structure = '/activities/%type%/';
-//     //     $wp_rewrite->add_rewrite_tag("%type%", '([^/]+)', "type=");
-//     //     $wp_rewrite->add_permastruct('activities', $activities_structure, false);
+
+//     $materialTerms = get_categories(array('type' => 'activity', 'taxonomy' => 'material', 'hide_empty' => 0));
+//     foreach ($materialTerms as $term) {
+//         add_rewrite_rule(
+//             'activities?material=/' . $term->slug,
+//             'index.php?/activities?material=' . $term->slug,
+//             'top'
+//         );
+//     }
+
+//     $effortLevelTerms = get_categories(array('type' => 'activity', 'taxonomy' => 'effort', 'hide_empty' => 0));
+//     foreach ($effortLevelTerms as $term) {
+//         add_rewrite_rule(
+//             'effort=/' . $term->slug . '/?$',
+//             'index.php?/activities?effort_level=' . $term->slug,
+//             'top'
+//         );
+//     }
+
+//     add_rewrite_tag('%type%', '([^&]+)');
+//     // var_dump($wp_rewrite);
 // }
+
+
+// Remember to flush_rewrite_rules(); or visit WordPress permalink structure settings page
 
 
 // add_filter('generate_rewrite_rules', 'generate_taxonomy_rewrite_rules');

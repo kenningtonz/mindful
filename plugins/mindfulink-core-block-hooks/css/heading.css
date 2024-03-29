@@ -29,6 +29,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	font-family: var(--wp--preset--font-family--sans-serif);
 	font-weight: 600;
 	margin-top: 1rem;
+	margin-bottom: 0;
 }
 
 .is-style-h4 {

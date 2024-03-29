@@ -26,12 +26,12 @@ wp.blocks.registerBlockVariation("core/post-terms", {
 
 wp.blocks.registerBlockVariation("core/post-terms", {
 	name: "activity_effort_levels_query",
-	title: "Activity Effort Levels",
+	title: "Activity Effort",
 	icon: "performance",
 	description: "Display the effort levels of activities.",
 	isDefault: false,
 	attributes: {
-		term: "effort_level",
+		term: "effort",
 		query: { post_type: "activity" },
 		providerNameSlug: "activity-effort-levels",
 	},
@@ -60,4 +60,9 @@ wp.blocks.registerBlockStyle("core/post-template", {
 wp.blocks.registerBlockStyle("core/post-title", {
 	name: "activity-title",
 	label: "Activity Title",
+});
+
+wp.blocks.registerBlockStyle("core/post-excerpt", {
+	name: "activity-excerpt",
+	label: "Activity Excerpt",
 });

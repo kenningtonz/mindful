@@ -42,6 +42,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	text-decoration: none;
 }
 
+.is-style-post-template li h3 {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: var(--wp--preset--font-size--medium);
+	color: var(--wp--preset--color--blue-dark);
+	text-decoration: none;
+}
+
 .is-style-post-template li h2 a:hover {
 	text-decoration: underline;
 	text-decoration-color: var(--wp--preset--color--blue-dark);
