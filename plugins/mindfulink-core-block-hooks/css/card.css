@@ -11,6 +11,8 @@ Version: 100.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+/* text styles */
 .is-style-card-lavender .is-style-h1,
 .is-style-card-lavender .is-style-h2,
 .is-style-card-lavender .is-style-h4,
@@ -35,6 +37,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	padding: 0;
 }
 
+/* base cards */
 .is-style-card-blue,
 .is-style-card-gold,
 .is-style-card-green,
@@ -48,11 +51,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	margin: 2rem;
 }
 
+/* lavender card */
 .is-style-card-lavender {
 	box-shadow: 0 5px 5px 1px var(--wp--preset--color--lavender-dark);
 	background-color: var(--wp--preset--color--lavender-light);
 }
-
 .is-style-card-lavender .is-style-h1,
 .is-style-card-lavender .is-style-h2,
 .is-style-card-lavender .is-style-h3,
@@ -64,6 +67,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	color: var(--wp--preset--color--lavender-darker);
 }
 
+/* blue card */
 .is-style-card-blue {
 	box-shadow: 0 5px 5px 1px var(--wp--preset--color--blue-dark);
 	background-color: var(--wp--preset--color--blue-light);
@@ -78,6 +82,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	color: var(--wp--preset--color--blue-dark);
 }
 
+/* green card */
 .is-style-card-green {
 	box-shadow: 0 5px 5px 1px var(--wp--preset--color--green-dark);
 	background-color: var(--wp--preset--color--green-light);
@@ -92,6 +97,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	color: var(--wp--preset--color--green-dark);
 }
 
+/* gold card */
 .is-style-card-gold {
 	box-shadow: 0 5px 5px 1px var(--wp--preset--color--gold-dark);
 	background-color: var(--wp--preset--color--gold-light);
@@ -106,6 +112,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	color: var(--wp--preset--color--gold-darker);
 }
 
+/* taupe card */
 .is-style-card-taupe {
 	box-shadow: 0 5px 5px 1px var(--wp--preset--color--taupe-dark);
 	background-color: var(--wp--preset--color--taupe-light);

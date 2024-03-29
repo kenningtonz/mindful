@@ -20,6 +20,7 @@ function mindfulink_wp_enqueue_scripts()
 {
 	wp_enqueue_style('contact-form',  get_template_directory_uri() . '/css/contact-form.css', [], 	wp_get_theme()->get('Version'));
 	wp_enqueue_style('woocommerce',  get_template_directory_uri() . '/css/woocommerce.css', [], 	wp_get_theme()->get('Version'));
+	wp_enqueue_style('header',  get_template_directory_uri() . '/css/header.css', [], 	wp_get_theme()->get('Version'));
 
 	wp_enqueue_style(
 		'style',
@@ -89,7 +90,7 @@ function custom_post_subtitle($atts = [])
 	// Get the custom field titled: subtitle
 	$id = get_post_meta(get_the_id(), 'subtitle', true);
 	if (!empty($id)) {
-		$html = sprintf('<%2$s class="is-style-%2$s">%1$s</%2$s>', $id, $code_atts['tag']);
+		$html = sprintf('<%2$s class="alignfull is-style-%2$s">%1$s</%2$s>', $id, $code_atts['tag']);
 	}
 
 	return $html;

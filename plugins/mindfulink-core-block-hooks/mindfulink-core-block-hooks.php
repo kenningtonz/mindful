@@ -21,6 +21,7 @@ add_action('enqueue_block_editor_assets', 'mindfulink_enqueue_block_editor_asset
 function mindfulink_wp_enqueue_style()
 {
     $plugin_url = plugin_dir_url(__FILE__);
+    wp_enqueue_style('audio',  $plugin_url . "/css/audio.css");
 
     wp_enqueue_style('code',  $plugin_url . "/css/code.css");
     wp_enqueue_style('card',  $plugin_url . "/css/card.css");

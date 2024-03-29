@@ -15,3 +15,40 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /* Styles intended only for the front.*/
+
+/* fix header styles */
+.site-header a:active,
+.site-header a:hover,
+.site-header a,
+.site-header li a {
+	transition: transform 0.2s ease-in-out;
+	text-decoration: none !important;
+}
+.wp-block-navigation-link,
+.wp-block-navigation a:where(:not(.wp-element-button)),
+a:where(:not(.wp-element-button)) {
+	text-decoration: none !important;
+}
+.wp-block-navigation-link:hover,
+.wp-block-navigation a:where(:not(.wp-element-button)):hover,
+.wp-block-navigation a:where(:not(.wp-element-button)):active,
+a:where(:not(.wp-element-button)):hover {
+	text-decoration: underline !important;
+}
+.wp-site-blocks {
+	position: relative;
+}
+
+.site-header div {
+	background-position: center bottom;
+}
+
+.header-group {
+	background-repeat: repeat-x;
+	background-position: center bottom;
+	z-index: 1000;
+}
+
+.site-header a:hover {
+	transform: scale(1.1);
+}

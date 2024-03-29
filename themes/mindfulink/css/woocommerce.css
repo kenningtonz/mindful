@@ -15,7 +15,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /* Styles intended only for the front.*/
+
+/* buttons */
 .wp-block-add-to-cart-form button a,
+.wc-block-components-product-button a,
 .wc-block-components-checkout-place-order-button,
 .single_add_to_cart_button,
 .wc-block-cart__submit-container a {
@@ -60,26 +63,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
 }
 
+/* cart */
 .wc-block-components-main {
 	border-radius: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
-
 	margin: 2rem;
 	box-shadow: 0 5px 5px 1px var(--wp--preset--color--green-dark);
 	background-color: var(--wp--preset--color--green-lighter);
 }
 
-.wc-block-cart-items.wp-block-woocommerce-cart-line-items-block {
+.wc-block-cart-items.wp-block-woocommerce-cart-line-items-block,
+.wc-block-checkout__main,
+.is-mobile.wc-block-components-sidebar-layout .wc-block-components-main {
 	padding: 24px;
 }
-
 .wc-block-cart-item__image img {
 	border-radius: 0.8rem;
 	box-shadow: 0 2px 2px 0px var(--wp--preset--color--primary-dark);
 }
-
 .wc-block-components-quantity-selector {
 	background-color: white;
 }

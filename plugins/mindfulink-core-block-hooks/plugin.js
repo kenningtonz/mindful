@@ -182,3 +182,8 @@ wp.blocks.registerBlockStyle("core/post-author", {
 	name: "author",
 	label: "Author",
 });
+
+wp.blocks.registerBlockStyle("core/audio", {
+	name: "audio",
+	label: "Audio",
+});

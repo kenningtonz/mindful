@@ -30,44 +30,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.site-header a:active,
-.site-header a:hover,
-.site-header a,
-.site-header li a {
-	transition: transform 0.2s ease-in-out;
-	text-decoration: none !important;
-}
-.wp-block-navigation-link,
-.wp-block-navigation a:where(:not(.wp-element-button)),
-a:where(:not(.wp-element-button)) {
-	text-decoration: none !important;
-}
-.wp-block-navigation-link:hover,
-.wp-block-navigation a:where(:not(.wp-element-button)):hover,
-.wp-block-navigation a:where(:not(.wp-element-button)):active,
-a:where(:not(.wp-element-button)):hover {
-	text-decoration: underline !important;
-}
-.wp-site-blocks {
-	position: relative;
-}
-
-.site-header div {
-	background-position: center bottom;
-}
-
-.header-group {
-	background-repeat: repeat-x;
-	background-position: center bottom;
-	z-index: 1000;
-}
-
 .site-footer {
 	min-height: 180px;
-}
-
-.site-header a:hover {
-	transform: scale(1.1);
 }
 
 .flexRow {
@@ -95,10 +59,4 @@ a:where(:not(.wp-element-button)):hover {
 	.flexRow .child75 {
 		flex: 1 1 73%;
 	}
-}
-
-.wp-container-core-group-layout-4.wp-container-core-group-layout-4
-	> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-	margin-left: auto !important;
-	margin-right: auto !important;
 }
