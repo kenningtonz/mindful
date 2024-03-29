@@ -27,6 +27,7 @@ function mindfulink_wp_enqueue_style()
     wp_enqueue_style('details',  $plugin_url . "/css/details.css");
     wp_enqueue_style('button',  $plugin_url . "/css/button.css");
     wp_enqueue_style('image',  $plugin_url . "/css/image.css");
+    wp_enqueue_style('media-text',  $plugin_url . "/css/media-text.css");
 
     wp_enqueue_style('featured-image',  $plugin_url . "/css/featured-image.css");
     wp_enqueue_style('footnotes',  $plugin_url . "/css/footnotes.css");

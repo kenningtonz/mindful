@@ -85,3 +85,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .is-style-next-post a:hover {
 	background-color: var(--wp--preset--color--blue-darker);
 }
+
+.is-style-author img {
+	border-radius: 50%;
+}
+
+.is-style-author .wp-block-post-author__avatar {
+	margin-right: 0.5rem;
+}
+
+.is-style-author {
+	align-items: center;
+}

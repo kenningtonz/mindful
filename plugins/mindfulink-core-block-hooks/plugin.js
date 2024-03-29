@@ -172,3 +172,13 @@ wp.blocks.registerBlockStyle("core/image", {
 	name: "image",
 	label: "Image",
 });
+
+wp.blocks.registerBlockStyle("core/media-text", {
+	name: "media-text",
+	label: "Media Text",
+});
+
+wp.blocks.registerBlockStyle("core/post-author", {
+	name: "author",
+	label: "Author",
+});

@@ -19,18 +19,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .wc-block-components-checkout-place-order-button,
 .single_add_to_cart_button,
 .wc-block-cart__submit-container a {
-	color: white;
+	color: #ffffff;
+	padding: 10px 20px;
+	border-radius: 0.5rem;
 	text-decoration: none;
-	font-size: var(--wp--preset--font-size--medium);
-	font-family: var(--wp--preset--font-family--sans-serif);
-	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	cursor: pointer;
+	transition: background-color 0.3s;
 	background-color: var(--wp--preset--color--green-dark);
-	display: flex;
-	justify-content: center;
-	padding: 1rem 3rem;
-	align-items: center;
-	border-radius: 20px;
-	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
+	box-shadow: var(--wp--preset--shadow--natural);
+	border: none;
+}
+
+.wp-block-add-to-cart-form button a:hover,
+.wc-block-components-checkout-place-order-butto:hover,
+.single_add_to_cart_button:hover,
+.wc-block-cart__submit-container a:hover {
+	background-color: var(--wp--preset--color--green-darker);
+	border: none;
 }
 
 .wc-block-catalog-sorting select {
@@ -51,4 +58,28 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	align-items: center;
 	border-radius: 20px;
 	box-shadow: 0 2px 2px 0px var(--wp--preset--color--green);
+}
+
+.wc-block-components-main {
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	margin: 2rem;
+	box-shadow: 0 5px 5px 1px var(--wp--preset--color--green-dark);
+	background-color: var(--wp--preset--color--green-lighter);
+}
+
+.wc-block-cart-items.wp-block-woocommerce-cart-line-items-block {
+	padding: 24px;
+}
+
+.wc-block-cart-item__image img {
+	border-radius: 0.8rem;
+	box-shadow: 0 2px 2px 0px var(--wp--preset--color--primary-dark);
+}
+
+.wc-block-components-quantity-selector {
+	background-color: white;
 }
